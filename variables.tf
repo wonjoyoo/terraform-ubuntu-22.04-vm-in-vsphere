@@ -130,11 +130,21 @@ variable "ipv4_netmask" {
 variable "ssh_username" {
   type      = string
   sensitive = true
-  default   = "sam"
+  default   = "ubuntu"
+}
+variable "ssh_passwd" {
+  type        = string
+  description = "user password"
+  default = "ubuntu"
+  sensitive = true
 }
 
 variable "public_key" {
   type        = string
   description = "Public key to be used to ssh into a machine"
-  default     = "AAAAB3NzaC1yc2EAAAADAQABAAABAQCb7fcDZfIG+SxuP5UsZaoHPdh9MNxtEL5xRI71hzMS5h4SsZiPGEP4shLcF9YxSncdOJpyOJ6OgumNSFWj2pCd/kqg9wQzk/E1o+FRMbWX5gX8xMzPig8mmKkW5szhnP+yYYYuGUqvTAKX4ua1mQwL6PipWKYJ1huJhgpGHrvSQ6kuywJ23hw4klcaiZKXVYtvTi8pqZHhE5Kx1237a/6GRwnbGLEp0UR2Q/KPf6yRgZIrCdD+AtOznSBsBhf5vqcfnnwEIC/DOnqcOTahBVtFhOKuPSv3bUikAD4Vw7SIRteMltUVkd/O341fx+diKOBY7a8M6pn81HEZEmGsr7rT sam@SamMac.local"
+  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCcs62hDsx5AhocMc2rT8Yr/siyKoV7tUPYQnYhsJclAB+0kzlJLIgRbRZE25lhkg3Y3o427lTnao1acxUvQkTc8SX/BeOqnse5WjMWguteJPX/STLLuNg+LV28Oz+hyCbWaKgMWVzv+qQNTOKUxQjIWfnGr7FXS5w6SihU+9ynp1/rdOXqS7Jbgj1Y/NkYatYJfiV62CPI2TNcpjPOQi1TyZPEToH7+P0bjp+VWeOFFWULPNvopN0DxmUfZAk7Lo5kSNuVhiXRV+BmVK9h2k0pitIBBMrFtFQbGA+ixfT6rPLSqGGYYb3EnYSbh0zxLqL2p1kMC29vHDrGOapCVHGH wonjo.yoo@oracle.com"
+}
+variable "vm_id" {
+  description = "The ID of the VM"
+  default = "vm1234"
 }

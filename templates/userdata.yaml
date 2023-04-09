@@ -9,3 +9,6 @@ users:
 
 packages:
   - tree
+runcmd:
+  - echo "Start TKG create."
+  - su ${ssh_username} -c "tanzu mc create --file /home/${ssh_username}/tanzu-install/mgmtcluster.yaml"

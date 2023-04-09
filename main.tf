@@ -90,4 +90,18 @@ resource "vsphere_virtual_machine" "vm" {
       clone[0].customize[0].network_interface[0]
     ]
   }
+
+  #connection {
+  #    host = var.ipv4_address
+  #    type = "ssh"
+  #    user = "ubuntu"
+  #    password = "ubuntu"
+  #    timeout  = "3m"
+  #    #public_key = var.public_key
+  #}
+  #provisioner "remote-exec" {
+  #  inline = [
+  #    "tanzu mc create --file tanzu-install/mgmt.yaml"
+  #  ]
+  #}
 }
